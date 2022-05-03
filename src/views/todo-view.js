@@ -9,8 +9,9 @@ import {getVisibleTodosSelector, VisibilityFilters} from "../redux/reducer";
 import { connect } from "pwa-helpers";
 import { store } from "../redux/store";
 import {addTodo, clearCompleted, updateFilter, updateTodoStatus} from "../redux/action";
+import {BaseView} from "./base-view";
 
-class TodoView extends connect(store)(LitElement) {
+class TodoView extends connect(store)(BaseView) {
 
     static get properties() {
         return {
